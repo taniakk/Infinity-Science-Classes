@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Infinity Science Classes | NEET · JEE · CET Coaching in Nallasopara</title>
+  <!-- Tailwind CSS + Google Fonts + Font Awesome -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    * {
+      font-family: 'Inter', sans-serif;
+    }
+    html {
+      scroll-behavior: smooth;
+    }
+    .hero-gradient {
+      background: linear-gradient(135deg, #0B1120 0%, #0F172A 100%);
+    }
+    .card-hover {
+      transition: all 0.3s ease;
+    }
+    .card-hover:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 20px 25px -12px rgba(0, 0, 0, 0.2);
+    }
+    .stat-number {
+      font-weight: 800;
+      letter-spacing: -0.02em;
+    }
+    /* FAQ Accordion Styles */
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease-out;
+    }
+    .faq-item.active .faq-answer {
+      max-height: 300px;
+      transition: max-height 0.4s ease-in;
+    }
+    .faq-item.active .faq-icon i {
+      transform: rotate(180deg);
+    }
+    .faq-icon i {
+      transition: transform 0.2s ease;
+    }
+    .whatsapp-float {
+      position: fixed;
+      bottom: 28px;
+      right: 28px;
+      z-index: 50;
+      background-color: #25D366;
+      border-radius: 50%;
+      width: 56px;
+      height: 56px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 8px 20px rgba(37, 211, 102, 0.4);
+      transition: all 0.2s;
+    }
+    .whatsapp-float:hover {
+      transform: scale(1.08);
+      background-color: #20b859;
+    }
+    /* Mobile menu animation */
+    .mobile-menu-open {
+      max-height: 400px;
+      opacity: 1;
+      visibility: visible;
+      transition: all 0.3s ease;
+    }
+    .mobile-menu-closed {
+      max-height: 0;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s ease;
+    }
+    /* Slider / Carousel Styles */
+    .slider-container {
+      position: relative;
+      overflow: hidden;
+      border-radius: 1.5rem;
+      box-shadow: 0 25px 40px -12px rgba(0, 0, 0, 0.25);
+    }
+    .slider-track {
+      display: flex;
+      transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+    .slider-slide {
+      flex: 0 0 100%;
+      position: relative;
+    }
+    .slider-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(0,0,0,0.6);
+      backdrop-filter: blur(4px);
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all 0.2s;
+      z-index: 20;
+      color: white;
+      font-size: 1.4rem;
+    }
+    .slider-btn:hover {
+      background: rgba(249, 115, 22, 0.9);
+      transform: translateY(-50%) scale(1.05);
+    }
+    .slider-dots {
+      position: absolute;
+      bottom: 20px;
+      left: 0;
+      right: 0;
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      z-index: 20;
+    }
+    .dot {
+      width: 10px;
+      height: 10px;
+      background: rgba(255,255,255,0.5);
+      border-radius: 50%;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .dot.active {
+      background: #f97316;
+      width: 28px;
+      border-radius: 20px;
+    }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px);}
+      to { opacity: 1; transform: translateY(0);}
+    }
+    .animate-fade-up {
+      animation: fadeInUp 0.6s ease forwards;
+    }
+  </style>
+</head>
+<body class="bg-white text-gray-800">
+
+  <!-- STICKY TOP BAR with contact info -->
+  <div class="bg-gray-900 text-white text-sm py-2 px-4 flex flex-wrap justify-center md:justify-between items-center gap-3 sticky top-0 z-50 shadow-md">
+    <div class="flex flex-wrap gap-4 items-center justify-center text-xs md:text-sm">
+      <a href="tel:+918115592811" class="flex items-center gap-2 hover:text-green-400 transition"><i class="fas fa-phone-alt"></i> +91 81155 92811</a>
+      <a href="mailto:InfinityScienceClasses@gmail.com" class="flex items-center gap-2 hover:text-blue-300 transition"><i class="fas fa-envelope"></i> InfinityScienceClasses@gmail.com</a>
+      <span class="flex items-center gap-2"><i class="fas fa-map-marker-alt"></i> Nallasopara (E), Maharashtra</span>
+    </div>
+    <div class="hidden md:flex gap-3">
+      <a href="#" class="hover:text-yellow-300 text-xs"><i class="fab fa-instagram"></i> Instagram</a>
+      <a href="#" class="hover:text-yellow-300 text-xs"><i class="fab fa-facebook"></i> Facebook</a>
+    </div>
+  </div>
+
+  <!-- MODERN NAVBAR -->
+  <nav class="bg-white shadow-md sticky top-0 z-40 border-b border-gray-100">
+    <div class="container mx-auto px-5 py-3 flex justify-between items-center">
+      <div class="flex items-center gap-2">
+        <div class="w-10 h-10 bg-orange-500 rounded-full flex items-center justify-center text-white font-bold text-xl shadow-md">∞</div>
+        <span class="font-extrabold text-xl tracking-tight text-gray-800">Infinity <span class="text-orange-600">Science</span></span>
+      </div>
+      <div class="hidden md:flex items-center space-x-8">
+        <a href="#home" class="nav-link text-gray-700 hover:text-orange-600 font-medium transition duration-200">Home</a>
+        <a href="#courses" class="nav-link text-gray-700 hover:text-orange-600 font-medium transition duration-200">Courses</a>
+        <a href="#faculty" class="nav-link text-gray-700 hover:text-orange-600 font-medium transition duration-200">Faculty</a>
+        <a href="#testimonials" class="nav-link text-gray-700 hover:text-orange-600 font-medium transition duration-200">Success</a>
+        <a href="#faq" class="nav-link text-gray-700 hover:text-orange-600 font-medium transition duration-200">FAQs</a>
+        <a href="#contact" class="bg-orange-500 hover:bg-orange-600 text-white px-5 py-2 rounded-full font-semibold transition shadow-md flex items-center gap-2"><i class="fas fa-calendar-alt"></i> Free Demo</a>
+      </div>
+      <div class="md:hidden">
+        <button id="mobileMenuBtn" class="text-gray-700 focus:outline-none text-2xl"><i class="fas fa-bars"></i></button>
+      </div>
+    </div>
+    <div id="mobileMenu" class="md:hidden bg-white border-t border-gray-100 overflow-hidden transition-all duration-300 mobile-menu-closed">
+      <div class="flex flex-col px-5 py-4 space-y-3">
+        <a href="#home" class="mobile-nav-link text-gray-700 hover:text-orange-600 font-medium py-2 border-b border-gray-100">🏠 Home</a>
+        <a href="#courses" class="mobile-nav-link text-gray-700 hover:text-orange-600 font-medium py-2 border-b border-gray-100">📚 Courses</a>
+        <a href="#faculty" class="mobile-nav-link text-gray-700 hover:text-orange-600 font-medium py-2 border-b border-gray-100">👨‍🏫 Faculty</a>
+        <a href="#testimonials" class="mobile-nav-link text-gray-700 hover:text-orange-600 font-medium py-2 border-b border-gray-100">⭐ Success Stories</a>
+        <a href="#faq" class="mobile-nav-link text-gray-700 hover:text-orange-600 font-medium py-2 border-b border-gray-100">❓ FAQs</a>
+        <a href="#contact" class="bg-orange-500 text-white text-center px-4 py-2 rounded-full font-semibold mt-2">📞 Free Demo</a>
+      </div>
+    </div>
+  </nav>
+
+
+  <!-- HERO SECTION (below slider) - kept for consistency -->
+  <section id="home" class="hero-gradient text-white relative overflow-hidden">
+    <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1523240795612-9a054b0db644?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80')] bg-cover bg-center opacity-15"></div>
+    <div class="container mx-auto px-5 py-16 md:py-20 relative z-10">
+      <div class="max-w-3xl mx-auto text-center">
+        <span class="inline-block bg-orange-500/20 backdrop-blur-sm text-orange-300 text-sm font-semibold px-4 py-1 rounded-full mb-5 border border-orange-400/30">🚀 India's Top-Rated Science Coaching</span>
+        <h1 class="text-4xl md:text-6xl font-extrabold leading-tight tracking-tight">Crack <span class="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-yellow-300">NEET · JEE · CET</span> with Expert Faculty</h1>
+        <p class="text-lg md:text-xl text-gray-300 mt-5 max-w-2xl mx-auto">350+ success stories • 120+ top achievers • Personalized doubt solving • Nallasopara's most trusted science institute</p>
+        <div class="flex flex-wrap gap-4 justify-center mt-8">
+          <a href="#contact" class="bg-orange-500 hover:bg-orange-600 text-white font-semibold px-7 py-3 rounded-full shadow-lg transition-all duration-300 flex items-center gap-2"><i class="fas fa-chalkboard-user"></i> Book Free Demo</a>
+          <a href="#courses" class="bg-white/10 backdrop-blur-sm border border-white/30 hover:bg-white/20 text-white font-medium px-7 py-3 rounded-full transition-all duration-300 flex items-center gap-2"><i class="fas fa-graduation-cap"></i> View Courses</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS SECTION -->
+  <section class="py-12 bg-white border-b border-gray-100">
+    <div class="container mx-auto px-5">
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 text-center">
+        <div><div class="text-4xl md:text-5xl font-black text-orange-600 stat-number">350+</div><p class="text-gray-600 font-medium mt-2">Successful Students</p></div>
+        <div><div class="text-4xl md:text-5xl font-black text-orange-600 stat-number">120+</div><p class="text-gray-600 font-medium mt-2">Top Achievers</p></div>
+        <div><div class="text-4xl md:text-5xl font-black text-orange-600 stat-number">8+</div><p class="text-gray-600 font-medium mt-2">Expert Faculty</p></div>
+        <div><div class="text-4xl md:text-5xl font-black text-orange-600 stat-number">100%</div><p class="text-gray-600 font-medium mt-2">Doubt Resolution</p></div>
+      </div>
+    </div>
+  </section>
+
+
+    <!-- ========== 5-IMAGE SLIDER SECTION (AUTO-PLAY + MANUAL) ========== -->
+  <section class="py-12 bg-gray-50">
+    <div class="container mx-auto px-5 max-w-6xl">
+      <div class="text-center mb-8">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-800">📸 Our Campus & Success Gallery</h2>
+        <div class="w-24 h-1 bg-orange-500 mx-auto mt-3 rounded-full"></div>
+        <p class="text-gray-600 mt-3">Glance at our classrooms, workshops, and student achievements</p>
+      </div>
+      <div class="slider-container relative">
+        <div class="slider-track" id="sliderTrack">
+          <!-- Slide 1 -->
+          <div class="slider-slide">
+            <img src="/images/infinity5.jpeg" alt="Infinity Science Classroom" class="w-full h-[320px] md:h-[460px] object-cover">
+            <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-6 text-white">
+              <h3 class="text-xl font-bold">Modern Classrooms</h3>
+              <p>Smart boards & comfortable learning environment</p>
+            </div>
+          </div>
+          <!-- Slide 2 -->
+          <div class="slider-slide">
+            <img src="/images/infinity9.jpg" alt="Doubt Solving Session" class="w-full h-[320px] md:h-[460px] object-cover">
+            <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-6 text-white">
+              <h3 class="text-xl font-bold">Interactive Doubt Sessions</h3>
+              <p>Personalized attention for every student</p>
+            </div>
+          </div>
+          <!-- Slide 3 -->
+          <div class="slider-slide">
+            <img src="/images/infinity10.jpg" alt="Faculty Meeting" class="w-full h-[320px] md:h-[460px] object-cover">
+            <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-6 text-white">
+              <h3 class="text-xl font-bold">Expert Faculty Panel</h3>
+              <p>Gold medalists & IIT alumni guiding your path</p>
+            </div>
+          </div>
+          <!-- Slide 4 -->
+          <div class="slider-slide">
+            <img src="/images/infinity11.jpg" alt="Students Success Celebration" class="w-full h-[320px] md:h-[460px] object-cover">
+            <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-6 text-white">
+              <h3 class="text-xl font-bold">350+ Success Stories</h3>
+              <p>NEET, JEE, CET toppers from our institute</p>
+            </div>
+          </div>
+          <!-- Slide 5 -->
+          <div class="slider-slide">
+            <img src="/images/infinity12.jpg" alt="Library & Study Resources" class="w-full h-[320px] md:h-[460px] object-cover">
+            <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-6 text-white">
+              <h3 class="text-xl font-bold">Rich Study Material</h3>
+              <p>Comprehensive notes & mock test series</p>
+            </div>
+          </div>
+        </div>
+        <!-- Previous Button -->
+        <div id="prevSlide" class="slider-btn left-4"><i class="fas fa-chevron-left"></i></div>
+        <!-- Next Button -->
+        <div id="nextSlide" class="slider-btn right-4"><i class="fas fa-chevron-right"></i></div>
+        <!-- Dots Navigation -->
+        <div class="slider-dots" id="sliderDots"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES / USP SECTION -->
+  <section class="py-16 bg-gray-50">
+    <div class="container mx-auto px-5">
+      <div class="text-center mb-12"><h2 class="text-3xl md:text-4xl font-bold text-gray-800">Why Infinity Science Classes?</h2><div class="w-24 h-1 bg-orange-500 mx-auto mt-4 rounded-full"></div></div>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-white p-6 rounded-2xl shadow-md card-hover"><div class="w-14 h-14 bg-orange-100 rounded-full flex items-center justify-center text-orange-600 text-2xl mb-4"><i class="fas fa-chalkboard-teacher"></i></div><h3 class="text-xl font-bold mb-2">Expertised Faculty</h3><p class="text-gray-600">Gold medalists, BARC & GATE qualified educators with 7+ years experience.</p></div>
+        <div class="bg-white p-6 rounded-2xl shadow-md card-hover"><div class="w-14 h-14 bg-orange-100 rounded-full flex items-center justify-center text-orange-600 text-2xl mb-4"><i class="fas fa-question-circle"></i></div><h3 class="text-xl font-bold mb-2">Doubt Solving & Revision</h3><p class="text-gray-600">Regular doubt-clearing sessions + weekend revision tests.</p></div>
+        <div class="bg-white p-6 rounded-2xl shadow-md card-hover"><div class="w-14 h-14 bg-orange-100 rounded-full flex items-center justify-center text-orange-600 text-2xl mb-4"><i class="fas fa-chart-line"></i></div><h3 class="text-xl font-bold mb-2">Crash Courses & Mocks</h3><p class="text-gray-600">Intensive pre-exam crash courses, full-length mock tests.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COURSES SECTION -->
+  <section id="courses" class="py-16 bg-white">
+    <div class="container mx-auto px-5">
+      <div class="text-center mb-10"><h2 class="text-3xl md:text-4xl font-bold">📚 Programs We Offer</h2><div class="w-20 h-1 bg-orange-500 mx-auto mt-3 rounded-full"></div></div>
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="bg-gray-50 rounded-xl p-6 border-l-4 border-orange-500"><div class="font-bold text-xl">Foundation (9th-10th)</div><p class="text-gray-600 mt-2">CBSE / State Board — Physics, Chemistry, Maths, Biology.</p><span class="inline-block mt-3 text-orange-600 font-semibold">📅 Weekend batches</span></div>
+        <div class="bg-gray-50 rounded-xl p-6 border-l-4 border-orange-500"><div class="font-bold text-xl">Target JEE/NEET (11th-12th)</div><p class="text-gray-600 mt-2">Comprehensive syllabus + weekly tests.</p><span class="inline-block mt-3 text-orange-600 font-semibold">🎯 2-year integrated</span></div>
+        <div class="bg-gray-50 rounded-xl p-6 border-l-4 border-orange-500"><div class="font-bold text-xl">Repeater Crash Course</div><p class="text-gray-600 mt-2">Dedicated droppers batch for NEET/JEE/CET.</p><span class="inline-block mt-3 text-orange-600 font-semibold">🚀 Limited seats</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FACULTY SECTION -->
+  <section id="faculty" class="py-16 bg-gray-50">
+    <div class="container mx-auto px-5">
+      <div class="text-center mb-10"><h2 class="text-3xl font-bold">👨‍🏫 Meet Our Expert Faculty</h2></div>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="bg-white p-5 rounded-2xl shadow-md text-center"><div class="w-24 h-24 bg-orange-100 rounded-full mx-auto flex items-center justify-center text-3xl font-bold text-orange-700">VY</div><h3 class="font-bold text-lg mt-3">Er. Vindhya Yadav</h3><p class="text-orange-600 text-sm font-medium">Head of Chemistry</p><p class="text-xs text-gray-500">Gold Medalist | BARC qualified</p></div>
+        <div class="bg-white p-5 rounded-2xl shadow-md text-center"><div class="w-24 h-24 bg-orange-100 rounded-full mx-auto flex items-center justify-center text-3xl font-bold text-orange-700">SY</div><h3 class="font-bold text-lg mt-3">Er. Sandeep Yadav</h3><p class="text-orange-600 text-sm font-medium">Head of Physics</p><p class="text-xs text-gray-500">IIT alumnus | 12+ yrs exp</p></div>
+        <div class="bg-white p-5 rounded-2xl shadow-md text-center"><div class="w-24 h-24 bg-orange-100 rounded-full mx-auto flex items-center justify-center text-3xl font-bold text-orange-700">AA</div><h3 class="font-bold text-lg mt-3">Akhilesh K. Acharya</h3><p class="text-orange-600 text-sm font-medium">Head of Biology</p><p class="text-xs text-gray-500">Ex-Allen faculty | NEET specialist</p></div>
+        <div class="bg-white p-5 rounded-2xl shadow-md text-center"><div class="w-24 h-24 bg-orange-100 rounded-full mx-auto flex items-center justify-center text-3xl font-bold text-orange-700">AK</div><h3 class="font-bold text-lg mt-3">Mr. Aditya Kumar</h3><p class="text-orange-600 text-sm font-medium">Mathematics Specialist</p><p class="text-xs text-gray-500">IIT Guwahati | JEE expert</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section id="testimonials" class="py-16 bg-white">
+    <div class="container mx-auto px-5">
+      <div class="text-center mb-10"><h2 class="text-3xl font-bold">💬 What Students & Parents Say</h2></div>
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="bg-gray-50 p-6 rounded-xl shadow-sm italic"><i class="fas fa-quote-left text-orange-300 text-2xl"></i><p class="mt-2 text-gray-700">“Excellent faculty and personal attention. My son's JEE rank improved drastically.”</p><div class="mt-4 font-semibold">— Mrs. Sharma (Parent)</div><div class="text-yellow-500">★★★★★</div></div>
+        <div class="bg-gray-50 p-6 rounded-xl shadow-sm italic"><i class="fas fa-quote-left text-orange-300 text-2xl"></i><p class="mt-2 text-gray-700">“Cleared NEET 2024 with 640 marks, thanks to Infinity's test series and revision strategy.”</p><div class="mt-4 font-semibold">— Priyanka M.</div><div class="text-yellow-500">★★★★★</div></div>
+        <div class="bg-gray-50 p-6 rounded-xl shadow-sm italic"><i class="fas fa-quote-left text-orange-300 text-2xl"></i><p class="mt-2 text-gray-700">“Personalized doubt solving & regular parent-teacher meets kept me motivated.”</p><div class="mt-4 font-semibold">— Rohan S.</div><div class="text-yellow-500">★★★★½</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ SECTION -->
+  <section id="faq" class="py-16 bg-gray-50">
+    <div class="container mx-auto px-5 max-w-3xl">
+      <div class="text-center mb-8"><h2 class="text-3xl font-bold">📌 Frequently Asked Questions</h2></div>
+      <div class="space-y-4" id="faqContainer">
+        <div class="faq-item bg-white rounded-xl shadow-sm p-5 cursor-pointer"><div class="flex justify-between items-center"><h3 class="font-semibold text-lg">What is the official contact no of Infinity Science Classes?</h3><span class="faq-icon"><i class="fas fa-chevron-down text-orange-500"></i></span></div><div class="faq-answer mt-2 text-gray-600">📞 +91 8115592811 (also available on WhatsApp)</div></div>
+        <div class="faq-item bg-white rounded-xl shadow-sm p-5 cursor-pointer"><div class="flex justify-between items-center"><h3 class="font-semibold text-lg">Does Infinity Science provide study material & mock tests?</h3><span class="faq-icon"><i class="fas fa-chevron-down text-orange-500"></i></span></div><div class="faq-answer mt-2 text-gray-600">Yes, comprehensive printed study material + mock tests + previous year papers.</div></div>
+        <div class="faq-item bg-white rounded-xl shadow-sm p-5 cursor-pointer"><div class="flex justify-between items-center"><h3 class="font-semibold text-lg">Are online classes available?</h3><span class="faq-icon"><i class="fas fa-chevron-down text-orange-500"></i></span></div><div class="faq-answer mt-2 text-gray-600">Currently offline focus, but online sessions can be arranged on special request.</div></div>
+        <div class="faq-item bg-white rounded-xl shadow-sm p-5 cursor-pointer"><div class="flex justify-between items-center"><h3 class="font-semibold text-lg">Is there any scholarship or discount?</h3><span class="faq-icon"><i class="fas fa-chevron-down text-orange-500"></i></span></div><div class="faq-answer mt-2 text-gray-600">Merit-based scholarships & fee discounts. Contact admin for details.</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT SECTION -->
+  <section id="contact" class="py-16 bg-white">
+    <div class="container mx-auto px-5 max-w-4xl">
+      <div class="bg-gradient-to-br from-gray-900 to-gray-800 rounded-2xl p-8 text-white shadow-2xl">
+        <div class="text-center mb-6"><h2 class="text-2xl md:text-3xl font-bold">🎯 Get Free Career Counseling</h2><p class="text-gray-300 mt-2">Talk to our academic advisor & book a demo class</p></div>
+        <form class="grid md:grid-cols-2 gap-5">
+          <input type="text" placeholder="Student Name" class="px-4 py-3 rounded-full bg-white/10 border border-gray-600 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-orange-500">
+          <input type="tel" placeholder="Mobile Number" class="px-4 py-3 rounded-full bg-white/10 border border-gray-600 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-orange-500">
+          <select class="px-4 py-3 rounded-full bg-white/10 border border-gray-600 text-white"><option>Select Class / Goal</option><option>9th / 10th Foundation</option><option>11th (NEET/JEE)</option><option>12th (NEET/JEE)</option><option>Repeater / Dropper</option></select>
+          <button type="submit" class="bg-orange-500 hover:bg-orange-600 font-bold py-3 rounded-full transition flex items-center justify-center gap-2"><i class="fas fa-paper-plane"></i> Request Callback</button>
+        </form>
+        <p class="text-center text-gray-300 text-sm mt-6">📞 or call directly: <a href="tel:+918115592811" class="text-orange-400 font-semibold">+91 81155 92811</a> | 📍 Nallasopara East</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-gray-900 text-gray-400 py-8 border-t border-gray-800">
+    <div class="container mx-auto px-5 flex flex-col md:flex-row justify-between items-center gap-4">
+      <div><span class="text-white font-bold text-xl">Infinity Science Classes</span><p class="text-sm">Best Science Coaching in Nallasopara | NEET • JEE • CET</p></div>
+      <div class="flex gap-6 text-sm"><a href="#home" class="hover:text-white">Home</a><a href="#courses" class="hover:text-white">Courses</a><a href="#contact" class="hover:text-white">Contact</a></div>
+      <div class="text-sm">© 2025 Infinity Science Classes. All rights reserved.</div>
+    </div>
+  </footer>
+
+  <!-- WHATSAPP FLOAT -->
+  <a href="https://wa.me/918115592811?text=Hello%20Infinity%20Science%2C%20I%20want%20to%20know%20more%20about%20NEET%2FJEE%20coaching" class="whatsapp-float" target="_blank"><i class="fab fa-whatsapp text-white text-3xl"></i></a>
+
+  <!-- SLIDER & MOBILE MENU & FAQ JAVASCRIPT -->
+  <script>
+    // ---------- 5-IMAGE SLIDER (AUTO-PLAY + CONTROLS) ----------
+    const track = document.getElementById('sliderTrack');
+    const slides = document.querySelectorAll('.slider-slide');
+    const prevBtn = document.getElementById('prevSlide');
+    const nextBtn = document.getElementById('nextSlide');
+    const dotsContainer = document.getElementById('sliderDots');
+    let currentIndex = 0;
+    const totalSlides = slides.length;
+    let autoPlayInterval;
+    let isTransitioning = false;
+
+    // Create Dots
+    function createDots() {
+      dotsContainer.innerHTML = '';
+      for (let i = 0; i < totalSlides; i++) {
+        const dot = document.createElement('div');
+        dot.classList.add('dot');
+        if (i === currentIndex) dot.classList.add('active');
+        dot.addEventListener('click', () => {
+          if (isTransitioning) return;
+          goToSlide(i);
+          resetAutoPlay();
+        });
+        dotsContainer.appendChild(dot);
+      }
+    }
+
+    function updateDots() {
+      document.querySelectorAll('.dot').forEach((dot, idx) => {
+        if (idx === currentIndex) dot.classList.add('active');
+        else dot.classList.remove('active');
+      });
+    }
+
+    function goToSlide(index) {
+      if (isTransitioning) return;
+      if (index < 0) index = totalSlides - 1;
+      if (index >= totalSlides) index = 0;
+      if (index === currentIndex) return;
+      isTransitioning = true;
+      currentIndex = index;
+      track.style.transform = `translateX(-${currentIndex * 100}%)`;
+      updateDots();
+      setTimeout(() => { isTransitioning = false; }, 500);
+    }
+
+    function nextSlide() { goToSlide(currentIndex + 1); resetAutoPlay(); }
+    function prevSlide() { goToSlide(currentIndex - 1); resetAutoPlay(); }
+
+    function startAutoPlay() {
+      if (autoPlayInterval) clearInterval(autoPlayInterval);
+      autoPlayInterval = setInterval(() => {
+        if (!isTransitioning) nextSlide();
+      }, 4500);
+    }
+    function resetAutoPlay() { startAutoPlay(); }
+
+    prevBtn.addEventListener('click', prevSlide);
+    nextBtn.addEventListener('click', nextSlide);
+    createDots();
+    startAutoPlay();
+
+    // optional: pause autoplay on hover
+    const sliderContainer = document.querySelector('.slider-container');
+    sliderContainer.addEventListener('mouseenter', () => clearInterval(autoPlayInterval));
+    sliderContainer.addEventListener('mouseleave', startAutoPlay);
+
+    // Mobile menu toggle
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    let menuOpen = false;
+    mobileMenuBtn.addEventListener('click', () => {
+      if (!menuOpen) {
+        mobileMenu.classList.remove('mobile-menu-closed');
+        mobileMenu.classList.add('mobile-menu-open');
+        menuOpen = true;
+      } else {
+        mobileMenu.classList.remove('mobile-menu-open');
+        mobileMenu.classList.add('mobile-menu-closed');
+        menuOpen = false;
+      }
+    });
+    document.querySelectorAll('.mobile-nav-link').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.remove('mobile-menu-open');
+        mobileMenu.classList.add('mobile-menu-closed');
+        menuOpen = false;
+      });
+    });
+    // FAQ accordion
+    document.querySelectorAll('.faq-item').forEach(item => {
+      item.addEventListener('click', () => item.classList.toggle('active'));
+    });
+  </script>
+</body>
