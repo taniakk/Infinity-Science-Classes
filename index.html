@@ -170,7 +170,7 @@
       </div>
       <div class="hidden md:flex items-center space-x-8">
         <a href="#home" class="nav-link text-gray-700 hover:text-orange-600 font-medium transition duration-200">Home</a>
-        <a href="#courses" class="nav-link text-gray-700 hover:text-orange-600 font-medium transition duration-200">Courses</a>
+        <a href="/courses.html" class="nav-link text-gray-700 hover:text-orange-600 font-medium transition duration-200">Courses</a>
         <a href="#faculty" class="nav-link text-gray-700 hover:text-orange-600 font-medium transition duration-200">Faculty</a>
         <a href="#testimonials" class="nav-link text-gray-700 hover:text-orange-600 font-medium transition duration-200">Success</a>
         <a href="#faq" class="nav-link text-gray-700 hover:text-orange-600 font-medium transition duration-200">FAQs</a>
@@ -183,7 +183,7 @@
     <div id="mobileMenu" class="md:hidden bg-white border-t border-gray-100 overflow-hidden transition-all duration-300 mobile-menu-closed">
       <div class="flex flex-col px-5 py-4 space-y-3">
         <a href="#home" class="mobile-nav-link text-gray-700 hover:text-orange-600 font-medium py-2 border-b border-gray-100">🏠 Home</a>
-        <a href="#courses" class="mobile-nav-link text-gray-700 hover:text-orange-600 font-medium py-2 border-b border-gray-100">📚 Courses</a>
+        <a href="/courses.html" class="mobile-nav-link text-gray-700 hover:text-orange-600 font-medium py-2 border-b border-gray-100">📚 Courses</a>
         <a href="#faculty" class="mobile-nav-link text-gray-700 hover:text-orange-600 font-medium py-2 border-b border-gray-100">👨‍🏫 Faculty</a>
         <a href="#testimonials" class="mobile-nav-link text-gray-700 hover:text-orange-600 font-medium py-2 border-b border-gray-100">⭐ Success Stories</a>
         <a href="#faq" class="mobile-nav-link text-gray-700 hover:text-orange-600 font-medium py-2 border-b border-gray-100">❓ FAQs</a>
@@ -210,16 +210,49 @@
   </section>
 
   <!-- STATS SECTION -->
-  <section class="py-12 bg-white border-b border-gray-100">
-    <div class="container mx-auto px-5">
-      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 text-center">
-        <div><div class="text-4xl md:text-5xl font-black text-orange-600 stat-number">350+</div><p class="text-gray-600 font-medium mt-2">Successful Students</p></div>
-        <div><div class="text-4xl md:text-5xl font-black text-orange-600 stat-number">120+</div><p class="text-gray-600 font-medium mt-2">Top Achievers</p></div>
-        <div><div class="text-4xl md:text-5xl font-black text-orange-600 stat-number">8+</div><p class="text-gray-600 font-medium mt-2">Expert Faculty</p></div>
-        <div><div class="text-4xl md:text-5xl font-black text-orange-600 stat-number">100%</div><p class="text-gray-600 font-medium mt-2">Doubt Resolution</p></div>
-      </div>
+<section id="stats-section" class="py-16 ...">
+  <div class="container mx-auto px-5">
+
+    <div class="text-center mb-12">
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-800">
+        Our Achievements
+      </h2>
+      <div class="w-24 h-1 bg-orange-500 mx-auto mt-4 rounded-full"></div>
     </div>
-  </section>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 text-center">
+
+      <!-- Stat 1 -->
+      <div class="bg-white p-6 rounded-2xl shadow-md hover:shadow-xl transition transform hover:-translate-y-2">
+        <i class="fas fa-user-graduate text-orange-500 text-3xl mb-4"></i>
+        <div class="text-4xl md:text-5xl font-black text-orange-600 counter" data-target="350">0</div>
+        <p class="text-gray-600 font-medium mt-2">Successful Students</p>
+      </div>
+
+      <!-- Stat 2 -->
+      <div class="bg-white p-6 rounded-2xl shadow-md hover:shadow-xl transition transform hover:-translate-y-2">
+        <i class="fas fa-trophy text-orange-500 text-3xl mb-4"></i>
+        <div class="text-4xl md:text-5xl font-black text-orange-600 counter" data-target="120">0</div>
+        <p class="text-gray-600 font-medium mt-2">Top Achievers</p>
+      </div>
+
+      <!-- Stat 3 -->
+      <div class="bg-white p-6 rounded-2xl shadow-md hover:shadow-xl transition transform hover:-translate-y-2">
+        <i class="fas fa-chalkboard-teacher text-orange-500 text-3xl mb-4"></i>
+        <div class="text-4xl md:text-5xl font-black text-orange-600 counter" data-target="8">0</div>
+        <p class="text-gray-600 font-medium mt-2">Expert Faculty</p>
+      </div>
+
+      <!-- Stat 4 -->
+      <div class="bg-white p-6 rounded-2xl shadow-md hover:shadow-xl transition transform hover:-translate-y-2">
+        <i class="fas fa-check-circle text-orange-500 text-3xl mb-4"></i>
+        <div class="text-4xl md:text-5xl font-black text-orange-600 counter" data-target="100">0</div>
+        <p class="text-gray-600 font-medium mt-2">Doubt Resolution</p>
+      </div>
+
+    </div>
+  </div>
+</section>
 
 
     <!-- ========== 5-IMAGE SLIDER SECTION (AUTO-PLAY + MANUAL) ========== -->
@@ -285,27 +318,209 @@
 
   <!-- SERVICES / USP SECTION -->
   <section class="py-16 bg-gray-50">
-    <div class="container mx-auto px-5">
-      <div class="text-center mb-12"><h2 class="text-3xl md:text-4xl font-bold text-gray-800">Why Infinity Science Classes?</h2><div class="w-24 h-1 bg-orange-500 mx-auto mt-4 rounded-full"></div></div>
-      <div class="grid md:grid-cols-3 gap-8">
-        <div class="bg-white p-6 rounded-2xl shadow-md card-hover"><div class="w-14 h-14 bg-orange-100 rounded-full flex items-center justify-center text-orange-600 text-2xl mb-4"><i class="fas fa-chalkboard-teacher"></i></div><h3 class="text-xl font-bold mb-2">Expertised Faculty</h3><p class="text-gray-600">Gold medalists, BARC & GATE qualified educators with 7+ years experience.</p></div>
-        <div class="bg-white p-6 rounded-2xl shadow-md card-hover"><div class="w-14 h-14 bg-orange-100 rounded-full flex items-center justify-center text-orange-600 text-2xl mb-4"><i class="fas fa-question-circle"></i></div><h3 class="text-xl font-bold mb-2">Doubt Solving & Revision</h3><p class="text-gray-600">Regular doubt-clearing sessions + weekend revision tests.</p></div>
-        <div class="bg-white p-6 rounded-2xl shadow-md card-hover"><div class="w-14 h-14 bg-orange-100 rounded-full flex items-center justify-center text-orange-600 text-2xl mb-4"><i class="fas fa-chart-line"></i></div><h3 class="text-xl font-bold mb-2">Crash Courses & Mocks</h3><p class="text-gray-600">Intensive pre-exam crash courses, full-length mock tests.</p></div>
-      </div>
+  <div class="container mx-auto px-5">
+    
+    <!-- Heading -->
+    <div class="text-center mb-12">
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-800">
+        Why Infinity Science Classes?
+      </h2>
+      <div class="w-24 h-1 bg-orange-500 mx-auto mt-4 rounded-full"></div>
     </div>
-  </section>
+
+    <!-- Grid -->
+    <div class="grid md:grid-cols-3 gap-8">
+
+      <!-- Card -->
+      <div class="bg-white p-6 rounded-2xl shadow-md text-center transform transition duration-300 hover:-translate-y-2 hover:shadow-xl h-full flex flex-col justify-between">
+        <div>
+          <div class="w-14 h-14 mx-auto bg-orange-100 rounded-full flex items-center justify-center text-orange-600 text-2xl mb-4">
+            <i class="fas fa-chalkboard-teacher"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-2">Expertised Faculty</h3>
+          <p class="text-gray-600">
+            Gold medalists, BARC & GATE qualified educators with 7+ years experience.
+          </p>
+        </div>
+      </div>
+
+      <!-- Card -->
+      <div class="bg-white p-6 rounded-2xl shadow-md text-center transform transition duration-300 hover:-translate-y-2 hover:shadow-xl h-full flex flex-col justify-between">
+        <div>
+          <div class="w-14 h-14 mx-auto bg-orange-100 rounded-full flex items-center justify-center text-orange-600 text-2xl mb-4">
+            <i class="fas fa-question-circle"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-2">Doubt Solving & Revision</h3>
+          <p class="text-gray-600">
+            Regular doubt-clearing sessions + weekend revision tests.
+          </p>
+        </div>
+      </div>
+
+      <!-- Card -->
+      <div class="bg-white p-6 rounded-2xl shadow-md text-center transform transition duration-300 hover:-translate-y-2 hover:shadow-xl h-full flex flex-col justify-between">
+        <div>
+          <div class="w-14 h-14 mx-auto bg-orange-100 rounded-full flex items-center justify-center text-orange-600 text-2xl mb-4">
+            <i class="fas fa-chart-line"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-2">Crash Courses & Mocks</h3>
+          <p class="text-gray-600">
+            Intensive pre-exam crash courses, full-length mock tests.
+          </p>
+        </div>
+      </div>
+
+      <!-- Card -->
+      <div class="bg-white p-6 rounded-2xl shadow-md text-center transform transition duration-300 hover:-translate-y-2 hover:shadow-xl h-full flex flex-col justify-between">
+        <div>
+          <div class="w-14 h-14 mx-auto bg-orange-100 rounded-full flex items-center justify-center text-orange-600 text-2xl mb-4">
+            <i class="fas fa-users"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-2">Parents Interaction</h3>
+          <p class="text-gray-600">
+            We maintain strong communication with your parents through regular meetings & progress reports to help them support your education.
+          </p>
+        </div>
+      </div>
+
+      <!-- Card -->
+      <div class="bg-white p-6 rounded-2xl shadow-md text-center transform transition duration-300 hover:-translate-y-2 hover:shadow-xl h-full flex flex-col justify-between">
+        <div>
+          <div class="w-14 h-14 mx-auto bg-orange-100 rounded-full flex items-center justify-center text-orange-600 text-2xl mb-4">
+            <i class="fas fa-network-wired"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-2">Successful Community</h3>
+          <p class="text-gray-600">
+            A well-connected network of accomplished students assist current students in building connections and providing career guidance.
+          </p>
+        </div>
+      </div>
+
+      <!-- Card -->
+      <div class="bg-white p-6 rounded-2xl shadow-md text-center transform transition duration-300 hover:-translate-y-2 hover:shadow-xl h-full flex flex-col justify-between">
+        <div>
+          <div class="w-14 h-14 mx-auto bg-orange-100 rounded-full flex items-center justify-center text-orange-600 text-2xl mb-4">
+            <i class="fas fa-chart-line"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-2">Tests & Assessments</h3>
+          <p class="text-gray-600">
+            Our detailed topic tests, major exams, and thorough feedback system help students gauge their understanding levels.
+          </p>
+        </div>
+      </div>
+
+      <!-- Card -->
+      <div class="bg-white p-6 rounded-2xl shadow-md text-center transform transition duration-300 hover:-translate-y-2 hover:shadow-xl h-full flex flex-col justify-between">
+        <div>
+          <div class="w-14 h-14 mx-auto bg-orange-100 rounded-full flex items-center justify-center text-orange-600 text-2xl mb-4">
+            <i class="fas fa-book-open"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-2">Top-notch study materials</h3>
+          <p class="text-gray-600">
+            Our dedicated faculty work diligently to cover all courses through lectures, study materials, and tests, ensuring students grasp all essential content.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
 
   <!-- COURSES SECTION -->
-  <section id="courses" class="py-16 bg-white">
-    <div class="container mx-auto px-5">
-      <div class="text-center mb-10"><h2 class="text-3xl md:text-4xl font-bold">📚 Programs We Offer</h2><div class="w-20 h-1 bg-orange-500 mx-auto mt-3 rounded-full"></div></div>
-      <div class="grid md:grid-cols-3 gap-6">
-        <div class="bg-gray-50 rounded-xl p-6 border-l-4 border-orange-500"><div class="font-bold text-xl">Foundation (9th-10th)</div><p class="text-gray-600 mt-2">CBSE / State Board — Physics, Chemistry, Maths, Biology.</p><span class="inline-block mt-3 text-orange-600 font-semibold">📅 Weekend batches</span></div>
-        <div class="bg-gray-50 rounded-xl p-6 border-l-4 border-orange-500"><div class="font-bold text-xl">Target JEE/NEET (11th-12th)</div><p class="text-gray-600 mt-2">Comprehensive syllabus + weekly tests.</p><span class="inline-block mt-3 text-orange-600 font-semibold">🎯 2-year integrated</span></div>
-        <div class="bg-gray-50 rounded-xl p-6 border-l-4 border-orange-500"><div class="font-bold text-xl">Repeater Crash Course</div><p class="text-gray-600 mt-2">Dedicated droppers batch for NEET/JEE/CET.</p><span class="inline-block mt-3 text-orange-600 font-semibold">🚀 Limited seats</span></div>
-      </div>
+<section id="courses" class="py-16 bg-gradient-to-b from-white to-gray-50">
+  <div class="container mx-auto px-5">
+    
+    <!-- Heading -->
+    <div class="text-center mb-12">
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-800">
+        📚 Programs We Offer
+      </h2>
+      <div class="w-24 h-1 bg-orange-500 mx-auto mt-4 rounded-full"></div>
+      <p class="text-gray-600 mt-4 max-w-2xl mx-auto">
+        Designed to build strong concepts and crack competitive exams with confidence.
+      </p>
     </div>
-  </section>
+
+    <!-- Grid -->
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+
+      <!-- Card 1 -->
+      <div class="bg-white rounded-2xl p-6 shadow-md border-t-4 border-orange-500 transform transition duration-300 hover:-translate-y-2 hover:shadow-xl">
+        
+        <div class="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center text-orange-600 text-xl mb-4">
+          <i class="fas fa-school"></i>
+        </div>
+
+        <h3 class="font-bold text-lg mb-2">9th & 10th (SSC/CBSE)</h3>
+        <p class="text-gray-600 text-sm mb-3">
+          Prefoundation course to build strong basics in Science & Maths.
+        </p>
+
+        <span class="inline-block text-orange-600 font-semibold text-sm">
+          📚 Strong Foundation
+        </span>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="bg-white rounded-2xl p-6 shadow-md border-t-4 border-orange-500 transform transition duration-300 hover:-translate-y-2 hover:shadow-xl relative">
+        
+        <!-- Badge -->
+        <span class="absolute top-4 right-4 bg-orange-500 text-white text-xs px-3 py-1 rounded-full">
+          Popular
+        </span>
+
+        <div class="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center text-orange-600 text-xl mb-4">
+          <i class="fas fa-book"></i>
+        </div>
+
+        <h3 class="font-bold text-lg mb-2">11th & 12th (HSC + CBSE)</h3>
+        <p class="text-gray-600 text-sm mb-3">
+          Complete board preparation with concept clarity and regular tests.
+        </p>
+
+        <span class="inline-block text-orange-600 font-semibold text-sm">
+          🎯 Board Focus
+        </span>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="bg-white rounded-2xl p-6 shadow-md border-t-4 border-orange-500 transform transition duration-300 hover:-translate-y-2 hover:shadow-xl">
+        
+        <div class="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center text-orange-600 text-xl mb-4">
+          <i class="fas fa-user-graduate"></i>
+        </div>
+
+        <h3 class="font-bold text-lg mb-2">IIT / NEET / MHCET</h3>
+        <p class="text-gray-600 text-sm mb-3">
+          Foundation program for competitive exams (11th & 12th students).
+        </p>
+
+        <span class="inline-block text-orange-600 font-semibold text-sm">
+          🚀 Competitive Prep
+        </span>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="bg-white rounded-2xl p-6 shadow-md border-t-4 border-orange-500 transform transition duration-300 hover:-translate-y-2 hover:shadow-xl">
+        
+        <div class="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center text-orange-600 text-xl mb-4">
+          <i class="fas fa-redo"></i>
+        </div>
+
+        <h3 class="font-bold text-lg mb-2">Repeater Batch</h3>
+        <p class="text-gray-600 text-sm mb-3">
+          Special batch for 12th passed students preparing for IIT / NEET.
+        </p>
+
+        <span class="inline-block text-orange-600 font-semibold text-sm">
+          🔁 Dropper Batch
+        </span>
+      </div>
+
+    </div>
+  </div>
+</section>
 
   <!-- FACULTY SECTION -->
   <section id="faculty" class="py-16 bg-gray-50">
@@ -321,16 +536,105 @@
   </section>
 
   <!-- TESTIMONIALS -->
-  <section id="testimonials" class="py-16 bg-white">
-    <div class="container mx-auto px-5">
-      <div class="text-center mb-10"><h2 class="text-3xl font-bold">💬 What Students & Parents Say</h2></div>
-      <div class="grid md:grid-cols-3 gap-6">
-        <div class="bg-gray-50 p-6 rounded-xl shadow-sm italic"><i class="fas fa-quote-left text-orange-300 text-2xl"></i><p class="mt-2 text-gray-700">“Excellent faculty and personal attention. My son's JEE rank improved drastically.”</p><div class="mt-4 font-semibold">— Mrs. Sharma (Parent)</div><div class="text-yellow-500">★★★★★</div></div>
-        <div class="bg-gray-50 p-6 rounded-xl shadow-sm italic"><i class="fas fa-quote-left text-orange-300 text-2xl"></i><p class="mt-2 text-gray-700">“Cleared NEET 2024 with 640 marks, thanks to Infinity's test series and revision strategy.”</p><div class="mt-4 font-semibold">— Priyanka M.</div><div class="text-yellow-500">★★★★★</div></div>
-        <div class="bg-gray-50 p-6 rounded-xl shadow-sm italic"><i class="fas fa-quote-left text-orange-300 text-2xl"></i><p class="mt-2 text-gray-700">“Personalized doubt solving & regular parent-teacher meets kept me motivated.”</p><div class="mt-4 font-semibold">— Rohan S.</div><div class="text-yellow-500">★★★★½</div></div>
-      </div>
+<section id="testimonials" class="py-16 bg-gradient-to-b from-white to-gray-50">
+  <div class="container mx-auto px-5">
+
+    <!-- Heading -->
+    <div class="text-center mb-12">
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-800">
+        💬 What Students & Parents Say
+      </h2>
+      <div class="w-24 h-1 bg-orange-500 mx-auto mt-4 rounded-full"></div>
+      <p class="text-gray-600 mt-4 max-w-2xl mx-auto">
+        Real experiences from our students and parents who achieved success with us.
+      </p>
     </div>
-  </section>
+
+    <!-- Grid -->
+    <div class="grid md:grid-cols-3 gap-8">
+
+      <!-- Card 1 -->
+      <div class="bg-white p-6 rounded-2xl shadow-md hover:shadow-xl transition transform hover:-translate-y-2">
+        
+        <!-- Quote Icon -->
+        <i class="fas fa-quote-left text-orange-300 text-3xl mb-4"></i>
+
+        <!-- Text -->
+        <p class="text-gray-700 italic">
+          “Excellent faculty and personal attention. My son's JEE rank improved drastically.”
+        </p>
+
+        <!-- User -->
+        <div class="flex items-center mt-6">
+          <div class="w-10 h-10 bg-orange-100 rounded-full flex items-center justify-center text-orange-600 font-bold">
+            S
+          </div>
+          <div class="ml-3">
+            <div class="font-semibold">Mrs. Sharma</div>
+            <div class="text-sm text-gray-500">Parent</div>
+          </div>
+        </div>
+
+        <!-- Stars -->
+        <div class="text-yellow-400 mt-3">
+          ★★★★★
+        </div>
+
+      </div>
+
+      <!-- Card 2 -->
+      <div class="bg-white p-6 rounded-2xl shadow-md hover:shadow-xl transition transform hover:-translate-y-2">
+        
+        <i class="fas fa-quote-left text-orange-300 text-3xl mb-4"></i>
+
+        <p class="text-gray-700 italic">
+          “Cleared NEET 2024 with 640 marks, thanks to Infinity's test series and revision strategy.”
+        </p>
+
+        <div class="flex items-center mt-6">
+          <div class="w-10 h-10 bg-orange-100 rounded-full flex items-center justify-center text-orange-600 font-bold">
+            P
+          </div>
+          <div class="ml-3">
+            <div class="font-semibold">Priyanka M.</div>
+            <div class="text-sm text-gray-500">Student</div>
+          </div>
+        </div>
+
+        <div class="text-yellow-400 mt-3">
+          ★★★★★
+        </div>
+
+      </div>
+
+      <!-- Card 3 -->
+      <div class="bg-white p-6 rounded-2xl shadow-md hover:shadow-xl transition transform hover:-translate-y-2">
+        
+        <i class="fas fa-quote-left text-orange-300 text-3xl mb-4"></i>
+
+        <p class="text-gray-700 italic">
+          “Personalized doubt solving & regular parent-teacher meets kept me motivated.”
+        </p>
+
+        <div class="flex items-center mt-6">
+          <div class="w-10 h-10 bg-orange-100 rounded-full flex items-center justify-center text-orange-600 font-bold">
+            R
+          </div>
+          <div class="ml-3">
+            <div class="font-semibold">Rohan S.</div>
+            <div class="text-sm text-gray-500">Student</div>
+          </div>
+        </div>
+
+        <div class="text-yellow-400 mt-3">
+          ★★★★☆
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</section>
 
   <!-- FAQ SECTION -->
   <section id="faq" class="py-16 bg-gray-50">
@@ -578,4 +882,45 @@
       item.addEventListener('click', () => item.classList.toggle('active'));
     });
   </script>
+<script>
+const counters = document.querySelectorAll('.counter');
+const speed = 200;
+
+const startCounting = () => {
+  counters.forEach(counter => {
+    const target = +counter.getAttribute('data-target');
+    let count = 0;
+
+    const updateCount = () => {
+      const increment = target / speed;
+
+      if (count < target) {
+        count += increment;
+        counter.innerText = Math.ceil(count);
+        setTimeout(updateCount, 10);
+      } else {
+        counter.innerText = target + (target === 100 ? '%' : '+');
+      }
+    };
+
+    updateCount();
+  });
+};
+
+// Run when section is visible
+let started = false;
+window.addEventListener('scroll', () => {
+  const section = document.querySelector('#stats-section');
+  if (!section) return;
+
+  const sectionTop = section.offsetTop;
+  const scrollPos = window.scrollY + window.innerHeight;
+
+  if (!started && scrollPos > sectionTop) {
+    startCounting();
+    started = true;
+  }
+});
+</script>
+
 </body>

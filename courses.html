@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Courses | Infinity Science Classes</title>
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body class="bg-gray-50 font-sans">
+
+<!-- MODERN NAVBAR -->
+  <nav class="bg-white shadow-md sticky top-0 z-40 border-b border-gray-100">
+    <div class="container mx-auto px-5 py-3 flex justify-between items-center">
+      <div class="flex items-center gap-2">
+        <div class="w-10 h-10 bg-orange-500 rounded-full flex items-center justify-center text-white font-bold text-xl shadow-md">∞</div>
+        <span class="font-extrabold text-xl tracking-tight text-gray-800">Infinity <span class="text-orange-600">Science </span>Classes</span>
+      </div>
+      <div class="hidden md:flex items-center space-x-8">
+        <a href="/index.html" class="nav-link text-gray-700 hover:text-orange-600 font-medium transition duration-200">Home</a>
+        <a href="/courses.html" class="nav-link text-gray-700 hover:text-orange-600 font-medium transition duration-200">Courses</a>
+        <a href="#faculty" class="nav-link text-gray-700 hover:text-orange-600 font-medium transition duration-200">Faculty</a>
+        <a href="#testimonials" class="nav-link text-gray-700 hover:text-orange-600 font-medium transition duration-200">Success</a>
+        <a href="#faq" class="nav-link text-gray-700 hover:text-orange-600 font-medium transition duration-200">FAQs</a>
+        <a href="#contact" class="bg-orange-500 hover:bg-orange-600 text-white px-5 py-2 rounded-full font-semibold transition shadow-md flex items-center gap-2"><i class="fas fa-calendar-alt"></i> Free Demo</a>
+      </div>
+      <div class="md:hidden">
+        <button id="mobileMenuBtn" class="text-gray-700 focus:outline-none text-2xl"><i class="fas fa-bars"></i></button>
+      </div>
+    </div>
+    <div id="mobileMenu" class="md:hidden bg-white border-t border-gray-100 overflow-hidden transition-all duration-300 mobile-menu-closed">
+      <div class="flex flex-col px-5 py-4 space-y-3">
+        <a href="/index.html" class="mobile-nav-link text-gray-700 hover:text-orange-600 font-medium py-2 border-b border-gray-100">🏠 Home</a>
+        <a href="/courses.html" class="mobile-nav-link text-gray-700 hover:text-orange-600 font-medium py-2 border-b border-gray-100">📚 Courses</a>
+        <a href="#faculty" class="mobile-nav-link text-gray-700 hover:text-orange-600 font-medium py-2 border-b border-gray-100">👨‍🏫 Faculty</a>
+        <a href="#testimonials" class="mobile-nav-link text-gray-700 hover:text-orange-600 font-medium py-2 border-b border-gray-100">⭐ Success Stories</a>
+        <a href="#faq" class="mobile-nav-link text-gray-700 hover:text-orange-600 font-medium py-2 border-b border-gray-100">❓ FAQs</a>
+        <a href="#contact" class="bg-orange-500 text-white text-center px-4 py-2 rounded-full font-semibold mt-2">📞 Free Demo</a>
+      </div>
+    </div>
+  </nav>
+
+
+<!-- ================= HERO ================= -->
+<section class="bg-gradient-to-r from-orange-500 to-orange-600 text-white py-20 text-center shadow-md">
+  <h1 class="text-4xl md:text-5xl font-bold">Our Courses</h1>
+  <p class="mt-4 text-lg text-orange-100">
+    Structured programs for NEET, JEE & Board success
+  </p>
+</section>
+
+
+<!-- ================= COURSES ================= -->
+<section class="py-10 md:py-16">
+  <div class="container mx-auto px-4 md:px-5">
+
+    <!-- Responsive Grid -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+
+      <!-- Card 1 -->
+      <div class="bg-white rounded-2xl p-5 md:p-6 shadow-lg hover:shadow-2xl transition duration-300 hover:-translate-y-2 border border-orange-100">
+        <div class="flex justify-between items-center mb-4">
+          <div class="w-10 h-10 md:w-12 md:h-12 bg-orange-100 rounded-full flex items-center justify-center text-orange-600 text-lg md:text-xl">
+            <i class="fas fa-school"></i>
+          </div>
+          <span class="text-xs bg-orange-100 text-orange-600 px-2 md:px-3 py-1 rounded-full">Foundation</span>
+        </div>
+
+        <h3 class="text-base md:text-lg font-bold text-gray-800 mb-2">9th & 10th</h3>
+        <p class="text-gray-600 text-xs md:text-sm mb-4">
+          Build strong basics in Science & Maths with concept clarity.
+        </p>
+
+        <ul class="text-xs md:text-sm text-gray-600 space-y-1 md:space-y-2 mb-5">
+          <li>✔ Weekly tests</li>
+          <li>✔ Doubt solving</li>
+          <li>✔ Study material</li>
+        </ul>
+
+        <button class="w-full bg-orange-500 hover:bg-orange-600 text-white py-2 rounded-full text-sm md:text-base font-semibold shadow-md">
+          Enroll Now
+        </button>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="bg-white rounded-2xl p-5 md:p-6 shadow-lg hover:shadow-2xl transition duration-300 hover:-translate-y-2 border border-orange-100 relative">
+
+        <span class="absolute top-3 right-3 md:top-4 md:right-4 bg-orange-500 text-white text-xs px-2 md:px-3 py-1 rounded-full shadow">
+          Popular
+        </span>
+
+        <div class="flex justify-between items-center mb-4">
+          <div class="w-10 h-10 md:w-12 md:h-12 bg-orange-100 rounded-full flex items-center justify-center text-orange-600 text-lg md:text-xl">
+            <i class="fas fa-book"></i>
+          </div>
+          <span class="text-xs bg-orange-100 text-orange-600 px-2 md:px-3 py-1 rounded-full">Boards</span>
+        </div>
+
+        <h3 class="text-base md:text-lg font-bold text-gray-800 mb-2">11th & 12th</h3>
+        <p class="text-gray-600 text-xs md:text-sm mb-4">
+          Complete board preparation with strong concepts and tests.
+        </p>
+
+        <ul class="text-xs md:text-sm text-gray-600 space-y-1 md:space-y-2 mb-5">
+          <li>✔ Full syllabus</li>
+          <li>✔ Weekly mock tests</li>
+          <li>✔ Notes & practice</li>
+        </ul>
+
+        <button class="w-full bg-orange-500 hover:bg-orange-600 text-white py-2 rounded-full text-sm md:text-base font-semibold shadow-md">
+          Enroll Now
+        </button>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="bg-white rounded-2xl p-5 md:p-6 shadow-lg hover:shadow-2xl transition duration-300 hover:-translate-y-2 border border-orange-100">
+
+        <div class="flex justify-between items-center mb-4">
+          <div class="w-10 h-10 md:w-12 md:h-12 bg-orange-100 rounded-full flex items-center justify-center text-orange-600 text-lg md:text-xl">
+            <i class="fas fa-user-graduate"></i>
+          </div>
+          <span class="text-xs bg-orange-100 text-orange-600 px-2 md:px-3 py-1 rounded-full">Competitive</span>
+        </div>
+
+        <h3 class="text-base md:text-lg font-bold text-gray-800 mb-2">NEET / JEE / CET</h3>
+        <p class="text-gray-600 text-xs md:text-sm mb-4">
+          Advanced preparation with expert faculty & test series.
+        </p>
+
+        <ul class="text-xs md:text-sm text-gray-600 space-y-1 md:space-y-2 mb-5">
+          <li>✔ Rank strategy</li>
+          <li>✔ Full test series</li>
+          <li>✔ Personal mentoring</li>
+        </ul>
+
+        <button class="w-full bg-orange-500 hover:bg-orange-600 text-white py-2 rounded-full text-sm md:text-base font-semibold shadow-md">
+          Enroll Now
+        </button>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="bg-white rounded-2xl p-5 md:p-6 shadow-lg hover:shadow-2xl transition duration-300 hover:-translate-y-2 border border-orange-100">
+
+        <div class="flex justify-between items-center mb-4">
+          <div class="w-10 h-10 md:w-12 md:h-12 bg-orange-100 rounded-full flex items-center justify-center text-orange-600 text-lg md:text-xl">
+            <i class="fas fa-redo"></i>
+          </div>
+          <span class="text-xs bg-orange-100 text-orange-600 px-2 md:px-3 py-1 rounded-full">Dropper</span>
+        </div>
+
+        <h3 class="text-base md:text-lg font-bold text-gray-800 mb-2">Repeater Batch</h3>
+        <p class="text-gray-600 text-xs md:text-sm mb-4">
+          Intensive revision program for top rank improvement.
+        </p>
+
+        <ul class="text-xs md:text-sm text-gray-600 space-y-1 md:space-y-2 mb-5">
+          <li>✔ Full revision</li>
+          <li>✔ Mock exams</li>
+          <li>✔ Doubt sessions</li>
+        </ul>
+
+        <button class="w-full bg-orange-500 hover:bg-orange-600 text-white py-2 rounded-full text-sm md:text-base font-semibold shadow-md">
+          Enroll Now
+        </button>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ================= CTA ================= -->
+<section class="bg-gradient-to-r from-orange-500 to-orange-600 text-white py-14 text-center shadow-inner">
+  <h2 class="text-3xl font-bold">Start Your Journey Today 🚀</h2>
+  <p class="mt-3 text-orange-100">Join Infinity Science Classes & achieve your dream rank</p>
+
+  <button class="mt-5 bg-white text-orange-500 px-6 py-2 rounded-full font-semibold hover:bg-gray-100 shadow-lg">
+    📞 Book Free Demo
+  </button>
+</section>
+
+<!-- FOOTER -->
+  <footer class="bg-gray-900 text-gray-400 pt-16 border-t border-gray-800 relative">
+
+  <!-- CTA Section -->
+  <div class="max-w-7xl mx-auto px-6 mb-14">
+    <div class="bg-gray-800 rounded-2xl p-8 flex flex-col md:flex-row justify-between items-center gap-6 border border-gray-700">
+      
+      <h2 class="text-2xl md:text-3xl font-semibold text-white">
+        <span class="block text-gray-400">Wanted to know more?</span>
+        Lets connect!
+      </h2>
+
+      <button id="openPopupBtn"
+        class="bg-white text-gray-900 px-6 py-3 rounded-lg font-semibold w-full md:w-auto hover:bg-gray-200 transition">
+        Get a callback
+      </button>
+
+    </div>
+  </div>
+
+  <!-- Footer Main -->
+  <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 pb-12">
+
+    <!-- About -->
+    <div>
+      <img src="/media/shop-86/infinity-science-classes/infinity-science-classes-b76978.webp"
+        class="bg-white p-2 rounded w-[180px] mb-4" alt="logo">
+
+      <p class="text-sm leading-relaxed">
+        The purpose of opening Infinity Science Class is to provide focused and comprehensive preparation
+        for students aspiring to excel in competitive exams such as NEET, JEE, and CET.
+      </p>
+
+      <!-- Social -->
+      <div class="flex gap-4 mt-4 text-lg">
+        <a href="https://facebook.com/profile.php?id=100054467979848" target="_blank"
+          class="hover:text-white transition"><i class="fa fa-facebook"></i></a>
+
+        <a href="https://instagram.com/infinityscienceclasses" target="_blank"
+          class="hover:text-white transition"><i class="fa fa-instagram"></i></a>
+
+        <a href="https://infinityscienceclasses.co.in" target="_blank"
+          class="hover:text-white transition"><i class="fa fa-globe"></i></a>
+      </div>
+    </div>
+
+    <!-- Quick Links -->
+    <div>
+      <h4 class="text-white text-lg font-semibold mb-4">Quick Links</h4>
+      <ul class="space-y-2 text-sm">
+        <li><a href="https://infinityscienceclasses.co.in" target="_blank" class="hover:text-white">Website</a></li>
+        <li><a href="/blogs" target="_blank" class="hover:text-white">Blogs</a></li>
+      </ul>
+    </div>
+
+    <!-- Resources -->
+    <div>
+      <h4 class="text-white text-lg font-semibold mb-4">Resources</h4>
+      <ul class="space-y-2 text-sm">
+        <li><a href="#home" class="hover:text-white">Home</a></li>
+        <li><a href="#features" class="hover:text-white">About us</a></li>
+        <li><a href="#about" class="hover:text-white">Our Journey</a></li>
+      </ul>
+    </div>
+
+    <!-- Contact -->
+    <div>
+      <h4 class="text-white text-lg font-semibold mb-4">Contact</h4>
+      <ul class="space-y-3 text-sm">
+        <li>
+          <a href="tel:918115592811" class="hover:text-white">
+            📞 918115592811
+          </a>
+        </li>
+        <li>
+          <a href="mailto:InfinityScienceClasses@gmail.com" class="hover:text-white">
+            ✉️ InfinityScienceClasses@gmail.com
+          </a>
+        </li>
+        <li>
+          📍 Nalasopara East, Maharashtra
+        </li>
+      </ul>
+    </div>
+
+  </div>
+
+  <!-- Bottom Bar -->
+  <div class="border-t border-gray-800 py-6">
+    <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4 text-sm">
+      
+      <div>
+        <span class="text-white font-semibold">Infinity Science Classes</span>
+        <p class="text-gray-500 text-xs">Best Science Coaching | NEET • JEE • CET</p>
+      </div>
+
+      <div class="flex gap-6">
+        <a href="#home" class="hover:text-white">Home</a>
+        <a href="#courses" class="hover:text-white">Courses</a>
+        <a href="#contact" class="hover:text-white">Contact</a>
+      </div>
+
+      <div class="text-gray-500 text-xs text-center md:text-right">
+        © 2025 Infinity Science Classes. All rights reserved.
+      </div>
+
+    </div>
+  </div>
+
+  <!-- WhatsApp Button -->
+  <a href="https://wa.me/918115592811?text=Enquiry%20from%20website" target="_blank">
+    <img src="/static/images/whatsapp.png"
+      class="fixed bottom-5 right-5 w-12 z-50 hover:scale-110 transition"
+      alt="whatsapp">
+  </a>
+
+</footer>
+
+
+<!-- ================= MOBILE MENU SCRIPT ================= -->
+<script>
+document.getElementById("mobileMenuBtn").onclick = function () {
+  document.getElementById("mobileMenu").classList.toggle("hidden");
+};
+</script>
+
+</body>
+</html>
