@@ -8,6 +8,7 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
   <style>
     * {
       font-family: 'Inter', sans-serif;
@@ -162,35 +163,45 @@
   </div>
 
   <!-- MODERN NAVBAR -->
-  <nav class="bg-white shadow-md sticky top-0 z-40 border-b border-gray-100">
-    <div class="container mx-auto px-5 py-3 flex justify-between items-center">
-      <div class="flex items-center gap-2">
-        <div class="w-10 h-10 bg-orange-500 rounded-full flex items-center justify-center text-white font-bold text-xl shadow-md">∞</div>
-        <span class="font-extrabold text-xl tracking-tight text-gray-800">Infinity <span class="text-orange-600">Science </span>Classes</span>
-      </div>
-      <div class="hidden md:flex items-center space-x-8">
-        <a href="#home" class="nav-link text-gray-700 hover:text-orange-600 font-medium transition duration-200">Home</a>
-        <a href="/courses.html" class="nav-link text-gray-700 hover:text-orange-600 font-medium transition duration-200">Courses</a>
-        <a href="#faculty" class="nav-link text-gray-700 hover:text-orange-600 font-medium transition duration-200">Faculty</a>
-        <a href="#testimonials" class="nav-link text-gray-700 hover:text-orange-600 font-medium transition duration-200">Success</a>
-        <a href="#faq" class="nav-link text-gray-700 hover:text-orange-600 font-medium transition duration-200">FAQs</a>
-        <a href="#contact" class="bg-orange-500 hover:bg-orange-600 text-white px-5 py-2 rounded-full font-semibold transition shadow-md flex items-center gap-2"><i class="fas fa-calendar-alt"></i> Free Demo</a>
-      </div>
-      <div class="md:hidden">
-        <button id="mobileMenuBtn" class="text-gray-700 focus:outline-none text-2xl"><i class="fas fa-bars"></i></button>
-      </div>
+  <nav class="bg-gradient-to-r from-white via-orange-50 to-white shadow-md fixed top-0 left-0 w-full z-50 border-b border-orange-100">
+  <div class="container mx-auto px-5 py-3 flex justify-between items-center">
+    
+    <!-- LOGO ONLY -->
+    <div class="flex items-center">
+      <img src="https://infinityscienceclasses.co.in/media/shop-86/infinity-science-classes/infinity-science-classes-b76978.webp" 
+           alt="Infinity Science Classes" 
+           class="h-12 w-auto object-contain">
     </div>
-    <div id="mobileMenu" class="md:hidden bg-white border-t border-gray-100 overflow-hidden transition-all duration-300 mobile-menu-closed">
-      <div class="flex flex-col px-5 py-4 space-y-3">
-        <a href="#home" class="mobile-nav-link text-gray-700 hover:text-orange-600 font-medium py-2 border-b border-gray-100">🏠 Home</a>
-        <a href="/courses.html" class="mobile-nav-link text-gray-700 hover:text-orange-600 font-medium py-2 border-b border-gray-100">📚 Courses</a>
-        <a href="#faculty" class="mobile-nav-link text-gray-700 hover:text-orange-600 font-medium py-2 border-b border-gray-100">👨‍🏫 Faculty</a>
-        <a href="#testimonials" class="mobile-nav-link text-gray-700 hover:text-orange-600 font-medium py-2 border-b border-gray-100">⭐ Success Stories</a>
-        <a href="#faq" class="mobile-nav-link text-gray-700 hover:text-orange-600 font-medium py-2 border-b border-gray-100">❓ FAQs</a>
-        <a href="#contact" class="bg-orange-500 text-white text-center px-4 py-2 rounded-full font-semibold mt-2">📞 Free Demo</a>
-      </div>
+
+    <div class="hidden md:flex items-center space-x-8">
+      <a href="#home" class="nav-link text-gray-700 hover:text-orange-600 font-medium transition duration-200">Home</a>
+      <a href="#courses" class="nav-link text-gray-700 hover:text-orange-600 font-medium transition duration-200">Courses</a>
+      <a href="#faculty" class="nav-link text-gray-700 hover:text-orange-600 font-medium transition duration-200">Faculty</a>
+      <a href="#testimonials" class="nav-link text-gray-700 hover:text-orange-600 font-medium transition duration-200">Success</a>
+      <a href="#faq" class="nav-link text-gray-700 hover:text-orange-600 font-medium transition duration-200">FAQs</a>
+      <a href="#contact" class="bg-orange-500 hover:bg-orange-600 text-white px-5 py-2 rounded-full font-semibold transition shadow-md flex items-center gap-2">
+        <i class="fas fa-calendar-alt"></i> Free Demo
+      </a>
     </div>
-  </nav>
+
+    <div class="md:hidden">
+      <button id="mobileMenuBtn" class="text-gray-700 focus:outline-none text-2xl">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+  </div>
+
+  <div id="mobileMenu" class="md:hidden bg-white border-t border-gray-100 overflow-hidden transition-all duration-300 mobile-menu-closed">
+    <div class="flex flex-col px-5 py-4 space-y-3">
+      <a href="#home" class="mobile-nav-link text-gray-700 hover:text-orange-600 font-medium py-2 border-b border-gray-100">🏠 Home</a>
+      <a href="#courses" class="mobile-nav-link text-gray-700 hover:text-orange-600 font-medium py-2 border-b border-gray-100">📚 Courses</a>
+      <a href="#faculty" class="mobile-nav-link text-gray-700 hover:text-orange-600 font-medium py-2 border-b border-gray-100">👨‍🏫 Faculty</a>
+      <a href="#testimonials" class="mobile-nav-link text-gray-700 hover:text-orange-600 font-medium py-2 border-b border-gray-100">⭐ Success Stories</a>
+      <a href="#faq" class="mobile-nav-link text-gray-700 hover:text-orange-600 font-medium py-2 border-b border-gray-100">❓ FAQs</a>
+      <a href="#contact" class="bg-orange-500 text-white text-center px-4 py-2 rounded-full font-semibold mt-2">📞 Free Demo</a>
+    </div>
+  </div>
+</nav>
 
 
   <!-- HERO SECTION (below slider) - kept for consistency -->
@@ -209,6 +220,88 @@
     </div>
   </section>
 
+  <!-- About -->
+<section id="about" class="py-24 bg-gradient-to-br from-white via-orange-50 to-white px-6">
+
+  <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
+
+    <!-- IMAGE SIDE -->
+    <div class="relative" data-aos="fade-right" data-aos-duration="1000">
+      <div class="rounded-3xl overflow-hidden shadow-2xl">
+        <img src="/images/infinity10.jpg"
+          alt="Students Studying"
+          class="w-full h-full object-cover">
+      </div>
+
+      <!-- Floating Card -->
+      <div class="absolute -bottom-6 -left-6 bg-white p-5 rounded-xl shadow-xl border border-orange-100"
+           data-aos="zoom-in" data-aos-delay="300">
+        <p class="text-2xl font-bold text-orange-600">350+</p>
+        <p class="text-xs text-gray-500">Successful Students</p>
+      </div>
+    </div>
+
+    <!-- CONTENT SIDE -->
+    <div data-aos="fade-left" data-aos-duration="1000">
+
+      <h2 class="text-3xl md:text-4xl font-bold mb-6 text-gray-800" data-aos="fade-up">
+        About <span class="text-orange-600">Infinity Science Classes</span>
+      </h2>
+
+      <p class="text-gray-600 leading-relaxed mb-6" data-aos="fade-up" data-aos-delay="100">
+        Infinity Science Classes is a dedicated coaching institute focused on helping students achieve excellence in
+        competitive exams like <span class="font-semibold text-gray-800">NEET, JEE, and CET</span>. 
+        The institute is built with the vision of providing strong academic foundations along with result-oriented preparation.
+      </p>
+
+      <p class="text-gray-600 leading-relaxed mb-6" data-aos="fade-up" data-aos-delay="200">
+        With a structured teaching approach, regular assessments, and personalized attention, students are guided at every step
+        to improve their performance and build confidence. The focus remains on concept clarity, consistent practice, 
+        and smart exam strategies.
+      </p>
+
+      <p class="text-gray-600 leading-relaxed mb-8" data-aos="fade-up" data-aos-delay="300">
+        Infinity Science Classes supports students from <span class="font-semibold text-gray-800">9th to 12th standard</span>,
+        ensuring they are well-prepared not only for board exams but also for competitive entrances.
+      </p>
+
+      <!-- KEY POINTS -->
+      <div class="grid grid-cols-2 gap-4 mb-8">
+
+        <div class="flex items-center gap-3" data-aos="fade-up" data-aos-delay="100">
+          <i class="fas fa-check-circle text-orange-500"></i>
+          <span class="text-sm text-gray-700">Expert Faculty</span>
+        </div>
+
+        <div class="flex items-center gap-3" data-aos="fade-up" data-aos-delay="200">
+          <i class="fas fa-check-circle text-orange-500"></i>
+          <span class="text-sm text-gray-700">Regular Tests</span>
+        </div>
+
+        <div class="flex items-center gap-3" data-aos="fade-up" data-aos-delay="300">
+          <i class="fas fa-check-circle text-orange-500"></i>
+          <span class="text-sm text-gray-700">Concept Clarity</span>
+        </div>
+
+        <div class="flex items-center gap-3" data-aos="fade-up" data-aos-delay="400">
+          <i class="fas fa-check-circle text-orange-500"></i>
+          <span class="text-sm text-gray-700">Personal Guidance</span>
+        </div>
+
+      </div>
+
+      <!-- CTA -->
+      <a href="#contact"
+        class="inline-block bg-orange-500 text-white px-7 py-3 rounded-full font-semibold shadow-md hover:bg-orange-600 transition"
+        data-aos="zoom-in" data-aos-delay="500">
+        Join Now
+      </a>
+
+    </div>
+
+  </div>
+</section>
+  
   <!-- STATS SECTION -->
 <section id="stats-section" class="py-16 ...">
   <div class="container mx-auto px-5">
@@ -265,23 +358,16 @@
       </div>
       <div class="slider-container relative">
         <div class="slider-track" id="sliderTrack">
-          <!-- Slide 1 -->
-          <div class="slider-slide">
-            <img src="/images/infinity5.jpeg" alt="Infinity Science Classroom" class="w-full h-[320px] md:h-[460px] object-cover">
-            <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-6 text-white">
-              <h3 class="text-xl font-bold">Modern Classrooms</h3>
-              <p>Smart boards & comfortable learning environment</p>
-            </div>
-          </div>
-          <!-- Slide 2 -->
-          <div class="slider-slide">
+
+          <!-- slide 1 -->
+           <div class="slider-slide">
             <img src="/images/infinity9.jpg" alt="Doubt Solving Session" class="w-full h-[320px] md:h-[460px] object-cover">
             <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-6 text-white">
               <h3 class="text-xl font-bold">Interactive Doubt Sessions</h3>
               <p>Personalized attention for every student</p>
             </div>
           </div>
-          <!-- Slide 3 -->
+          <!-- Slide 2 -->
           <div class="slider-slide">
             <img src="/images/infinity10.jpg" alt="Faculty Meeting" class="w-full h-[320px] md:h-[460px] object-cover">
             <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-6 text-white">
@@ -289,7 +375,7 @@
               <p>Gold medalists & IIT alumni guiding your path</p>
             </div>
           </div>
-          <!-- Slide 4 -->
+          <!-- Slide 3 -->
           <div class="slider-slide">
             <img src="/images/infinity11.jpg" alt="Students Success Celebration" class="w-full h-[320px] md:h-[460px] object-cover">
             <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-6 text-white">
@@ -297,7 +383,44 @@
               <p>NEET, JEE, CET toppers from our institute</p>
             </div>
           </div>
-          <!-- Slide 5 -->
+          <!-- Slide 4 -->
+          <div class="slider-slide">
+            <img src="/images/infinity5.jpeg" alt="Infinity Science Classroom" class="w-full h-[320px] md:h-[460px] object-cover">
+            <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-6 text-white">
+              <h3 class="text-xl font-bold">Modern Classrooms</h3>
+              <p>Smart boards & comfortable learning environment</p>
+            </div>
+          </div>
+
+          <!-- slide 5 -->
+          <div class="slider-slide">
+            <img src="/images/infinity6.jpeg" alt="Infinity Science Classroom" class="w-full h-[320px] md:h-[460px] object-cover">
+            <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-6 text-white">
+              <h3 class="text-xl font-bold">Modern Classrooms</h3>
+              <p>Smart boards & comfortable learning environment</p>
+            </div>
+          </div>
+
+          <!-- slide 6 -->
+          <div class="slider-slide">
+            <img src="/images/infinity7.jpeg" alt="Infinity Science Classroom" class="w-full h-[320px] md:h-[460px] object-cover">
+            <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-6 text-white">
+              <h3 class="text-xl font-bold">Modern Classrooms</h3>
+              <p>Smart boards & comfortable learning environment</p>
+            </div>
+          </div>
+
+          <!-- slide 7 -->
+          <div class="slider-slide">
+            <img src="/images/infinity8.jpeg" alt="Infinity Science Classroom" class="w-full h-[320px] md:h-[460px] object-cover">
+            <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-6 text-white">
+              <h3 class="text-xl font-bold">Modern Classrooms</h3>
+              <p>Smart boards & comfortable learning environment</p>
+            </div>
+          </div>
+         
+         
+          <!-- Slide 8 -->
           <div class="slider-slide">
             <img src="/images/infinity12.jpg" alt="Library & Study Resources" class="w-full h-[320px] md:h-[460px] object-cover">
             <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-6 text-white">
@@ -649,6 +772,68 @@
     </div>
   </section>
 
+  <section id="location" class="py-20 bg-gradient-to-br from-orange-50 via-white to-orange-100">
+  <div class="max-w-7xl mx-auto px-6">
+
+    <!-- Heading -->
+    <div class="text-center mb-14">
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-800">
+        Visit Our Institute
+      </h2>
+      <div class="w-24 h-1 bg-orange-500 mx-auto mt-4 rounded-full"></div>
+      <p class="text-gray-600 mt-4 max-w-xl mx-auto">
+        Find us easily near Nalasopara Station Road and start your success journey today.
+      </p>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-10 items-center">
+
+      <!-- LEFT SIDE -->
+      <div class="bg-white p-8 rounded-3xl shadow-lg hover:shadow-xl transition">
+
+        <h3 class="text-2xl font-semibold text-gray-800 mb-6">
+          Our Address
+        </h3>
+
+        <!-- Address -->
+        <div class="flex items-start gap-4 mb-6">
+          <i class="fas fa-map-marker-alt text-orange-500 text-xl mt-1"></i>
+          <p class="text-gray-600 leading-relaxed">
+            Bunglow No 5, Sanyukt Nagar,<br>
+            Behind Sunshine,<br>
+            Near Nalasopara Station Road,<br>
+            Nala Sopara, Maharashtra 401209
+          </p>
+        </div>
+
+        <!-- Buttons -->
+        <div class="flex gap-4 flex-wrap">
+          <a href="https://maps.app.goo.gl/Aa2jmQXdXeXMNLKx6" target="_blank"
+            class="bg-orange-500 text-white px-6 py-3 rounded-full font-semibold shadow-md hover:bg-orange-600 transition">
+            Get Directions
+          </a>
+
+          <a href="tel:+919876543210"
+            class="border border-orange-500 text-orange-500 px-6 py-3 rounded-full font-semibold hover:bg-orange-500 hover:text-white transition">
+            Call Now
+          </a>
+        </div>
+      </div>
+
+      <!-- RIGHT SIDE MAP -->
+      <div class="rounded-3xl overflow-hidden shadow-lg h-[350px] md:h-[450px]">
+        <iframe
+          src="https://maps.google.com/maps?q=19.4037,72.8238&z=16&output=embed"
+          class="w-full h-full border-0"
+          allowfullscreen=""
+          loading="lazy">
+        </iframe>
+      </div>
+
+    </div>
+  </div>
+</section>
+
   <!-- CONTACT SECTION -->
   <section id="contact" class="py-16 bg-white">
     <div class="container mx-auto px-5 max-w-4xl">
@@ -666,7 +851,7 @@
   </section>
 
   <!-- FOOTER -->
-  <footer class="bg-gray-900 text-gray-400 pt-16 border-t border-gray-800 relative">
+<footer class="bg-gray-900 text-gray-400 pt-16 border-t border-gray-800 relative">
 
   <!-- CTA Section -->
   <div class="max-w-7xl mx-auto px-6 mb-14">
@@ -690,7 +875,8 @@
 
     <!-- About -->
     <div>
-      <img src="/media/shop-86/infinity-science-classes/infinity-science-classes-b76978.webp"
+      <!-- UPDATED LOGO (SAME AS NAVBAR) -->
+      <img src="https://infinityscienceclasses.co.in/media/shop-86/infinity-science-classes/infinity-science-classes-b76978.webp"
         class="bg-white p-2 rounded w-[180px] mb-4" alt="logo">
 
       <p class="text-sm leading-relaxed">
@@ -784,7 +970,19 @@
 </footer>
 
   <!-- WHATSAPP FLOAT -->
-  <a href="https://wa.me/918115592811?text=Hello%20Infinity%20Science%2C%20I%20want%20to%20know%20more%20about%20NEET%2FJEE%20coaching" class="whatsapp-float" target="_blank"><i class="fab fa-whatsapp text-white text-3xl"></i></a>
+<a href="https://wa.me/918115592811?text=Hello%20Infinity%20Science%2C%20I%20want%20to%20know%20more%20about%20NEET%2FJEE%20coaching"
+   target="_blank"
+   class="fixed bottom-5 right-5 z-50">
+
+  <div class="w-14 h-14 bg-green-500 rounded-full shadow-lg 
+              flex items-center justify-center 
+              hover:scale-110 transition duration-300">
+
+    <i class="fab fa-whatsapp text-white text-2xl leading-none"></i>
+
+  </div>
+
+</a>
 
   <!-- SLIDER & MOBILE MENU & FAQ JAVASCRIPT -->
   <script>
@@ -882,6 +1080,8 @@
       item.addEventListener('click', () => item.classList.toggle('active'));
     });
   </script>
+
+  <!-- stat count -->
 <script>
 const counters = document.querySelectorAll('.counter');
 const speed = 200;
@@ -923,4 +1123,13 @@ window.addEventListener('scroll', () => {
 });
 </script>
 
+
+<!-- About AOS -->
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({
+    once: true,
+    offset: 100
+  });
+</script>
 </body>
